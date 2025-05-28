@@ -1,0 +1,11 @@
+<?php
+		$fu   = fopen( "https://randomuser.me/api/" , "r" ) ;
+		$json = fread( $fu , 8192 ) ;
+		fclose( $fu ) ;
+
+		$adat = json_decode( $json ) ;
+	?>
+
+	<div style=' margin: 18px 0 18px 48px; font-family: Courier; color:#226;'>
+		<pre><?php print_r($adat); ?></pre>
+	</div>
